@@ -1,15 +1,164 @@
 {% load static %}
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="{% static 'my.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
-<h1>Hello, world!</h1>
+
+<!-- header -->
+<header class="header fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-white mt-4" style="--bs-bg-opacity: .1;"
+         aria-label="Eighth navbar example">
+        <div class="container">
+            <a class="navbar-brand" href="#">Контейнер</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07"
+                    aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample07">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Дом</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Ссылка на сайт</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-bs-toggle="dropdown"
+                           aria-expanded="false"><font style="vertical-align: inherit;">Падать </font></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown07">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form>
+                    <input class="form-control" type="text" placeholder="Поиск" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class="constructor pb-4">
+        <div class="row">
+            <div class="carousel-item active">
+                <img class="d-block w-100"
+                     src="https://cdn.jevelin.shufflehound.com/blog1/wp-content/uploads/sites/11/2016/11/Title_2.jpg"
+                     style="min-height: 200px;"
+                     alt="">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="card-title">Название карточки</h5>
+                    <h1 class="text-center">Hello, world!</h1>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</main>
+<div class="sh-filter-blog sh-filter-container sh-portfolio-filter-style3 sh-portfolio-filter-style4">
+<div class="sh-filter">
+<span class="sh-filter-item active">
+<a href="https://jevelin.shufflehound.com/blog1/" class="sh-filter-item-content"><font style="vertical-align: inherit;">Все </font></a>
+</span>
+<span class="sh-filter-item">
+<a href="https://jevelin.shufflehound.com/blog1/?category=commercial" class="sh-filter-item-content"><font style="vertical-align: inherit;">
+ Коммерческий </font></a>
+</span>
+<span class="sh-filter-item">
+<a href="https://jevelin.shufflehound.com/blog1/?category=design" class="sh-filter-item-content"><font style="vertical-align: inherit;">
+ Дизайн </font></a>
+</span>
+<span class="sh-filter-item">
+<a href="https://jevelin.shufflehound.com/blog1/?category=nature" class="sh-filter-item-content"><font style="vertical-align: inherit;">
+ Природа </font></a>
+</span>
+<span class="sh-filter-item">
+<a href="https://jevelin.shufflehound.com/blog1/?category=people" class="sh-filter-item-content"><font style="vertical-align: inherit;">
+ Люди </font></a>
+</span>
+<span class="sh-filter-item">
+<a href="https://jevelin.shufflehound.com/blog1/?category=photography" class="sh-filter-item-content"><font style="vertical-align: inherit;">
+ Фотография </font></a>
+</span>
+<span class="sh-filter-item">
+<a href="https://jevelin.shufflehound.com/blog1/?category=tech" class="sh-filter-item-content"><font style="vertical-align: inherit;">
+ Технология </font></a>
+</span>
+<span class="sh-filter-item">
+<a href="https://jevelin.shufflehound.com/blog1/?category=travel" class="sh-filter-item-content"><font style="vertical-align: inherit;">
+ Путешествовать </font></a>
+</span>
+<span class="sh-filter-item">
+<a href="https://jevelin.shufflehound.com/blog1/?category=uncategorized" class="sh-filter-item-content"><font style="vertical-align: inherit;">
+ Без категории </font></a>
+</span>
+</div>
+</div>
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-3 pb-4">
+                <div class="card">
+                    <img src="https://cdn.icon-icons.com/icons2/215/PNG/256/edit-not-validated256_25238.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Заголовок карточки</h5>
+                        <p class="card-text">Небольшой пример текста, который должен основываться на названии карточки и
+                            составлять основную часть содержимого карты.</p>
+                        <a href="#" class="btn btn-primary">Перейти куда-нибудь</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 pb-4">
+                <div class="card">
+                    <img src="https://cdn.icon-icons.com/icons2/215/PNG/256/edit-not-validated256_25238.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Заголовок карточки</h5>
+                        <p class="card-text">Небольшой пример текста, который должен основываться на названии карточки и
+                            составлять основную часть содержимого карты.</p>
+                        <a href="#" class="btn btn-primary">Перейти куда-нибудь</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 pb-4">
+                <div class="card">
+                    <img src="https://cdn.icon-icons.com/icons2/215/PNG/256/edit-not-validated256_25238.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Заголовок карточки</h5>
+                        <p class="card-text">Небольшой пример текста, который должен основываться на названии карточки и
+                            составлять основную часть содержимого карты.</p>
+                        <a href="#" class="btn btn-primary">Перейти куда-нибудь</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 pb-4">
+                <div class="card">
+                    <img src="https://cdn.icon-icons.com/icons2/215/PNG/256/edit-not-validated256_25238.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Заголовок карточки</h5>
+                        <p class="card-text">Небольшой пример текста, который должен основываться на названии карточки и
+                            составлять основную часть содержимого карты.</p>
+                        <a href="#" class="btn btn-primary">Перейти куда-нибудь</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
