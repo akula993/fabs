@@ -31,7 +31,7 @@ class PostAdmin(admin.ModelAdmin):
     form = PostAdminForm
     """Для дублирование фильма"""
     list_editable = ('draft', 'category',)
-    fields = (('title', 'url'), 'text', ('tag', 'category'), 'draft',)
+    # fields = (('title', 'url'), 'text', ('tag', 'category'), 'draft',)
     # readonly_fields = ('get_image',)
     # fieldsets = (
     #     (None, {

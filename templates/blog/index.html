@@ -1,1 +1,48 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- Work Section Start -->
+    <div class="section section-padding-t90-b100">
+        <div class="container">
+
+            <!-- Section Title Start -->
+            <div class="section-title text-center" data-aos="fade-up">
+                <h2 class="title fz-32">Crafting effective digital marketing, web development, <br> video content and
+                    communication design</h2>
+            </div>
+            <!-- Section Title End -->
+
+            <!-- About Wrapper Start -->
+            <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 mb-n6">
+                {% for post in posts %}
+                    <!-- Single Work Start -->
+                    <div class="col mb-6">
+                        <div class="work border-1 border-danger">
+                            <div class="thumbnail text-center">
+                                <a class="image" href="work-details.html">
+                                    {% if post.image %}
+                                        <img src="{{ post.image.url }}" style="max-width: 200px; max-height: 200px;"
+                                             alt="work"></a>
+                                    {% else %}
+                                        <img src="https://img2.freepng.ru/20181125/wbe/kisspng-apartment-renting-london-residential-house-product-5bfa6d06347989.212131131543138566215.jpg"
+                                             alt="work"></a>
+                                    {% endif %}
+                            </div>
+                            <div class="info">
+                                <h3 class="title"><a href="work-details.html">{{ post.title }}</a></h3>
+                                <p class="desc">{{ post.text|safe|truncatewords_html:20 }}</p>
+                                <a href="work-details.html">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Work End -->
+                {% endfor %}
+
+
+            </div>
+            <!-- About Wrapper End -->
+
+        </div>
+    </div>
+    <!-- Work Section End -->
+{% endblock %}

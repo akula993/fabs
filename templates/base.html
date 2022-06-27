@@ -1,166 +1,349 @@
 {% load static %}
-<!doctype html>
-<html lang="ru">
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link rel="stylesheet" href="{% static 'my.css' %}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Work || Exomac</title>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/images/favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/vendor/vendor.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/plugins.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.min.css' %}">
 </head>
+
 <body>
 
-<!-- header -->
-<header class="header fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-white mt-4" style="--bs-bg-opacity: .1;"
-         aria-label="Eighth navbar example">
-        <div class="container">
-            <a class="navbar-brand" href="#">Контейнер</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07"
-                    aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<div id="page" class="section">
+    <!-- Header Section Start -->
+    <div class="header-section header-transparent sticky-header section">
+        <div class="header-inner">
+            <div class="container position-relative">
+                <div class="row justify-content-between align-items-center">
 
-            <div class="collapse navbar-collapse" id="navbarsExample07">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Дом</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Ссылка на сайт</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-bs-toggle="dropdown"
-                           aria-expanded="false"><font style="vertical-align: inherit;">Падать </font></a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdown07">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <!-- Header Logo Start -->
+                    <div class="col-xl-2 col-auto order-0">
+                        <div class="header-logo">
+                            <a href="index.html">
+                                <img class="dark-logo" src="{% static 'assets/images/logo/logo.png' %}"
+                                     alt="Agency Logo">
+
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Header Logo End -->
+
+                    <!-- Header Main Menu Start -->
+                    <div class="col-auto col-xl d-flex align-items-center justify-content-xl-center justify-content-end order-2 order-xl-1">
+                        <div class="menu-column-area d-none d-xl-block position-static">
+                            <nav class="site-main-menu">
+                                <ul>
+                                    <li class="has-children">
+                                        <a href="index.html"><span class="menu-text">Homepage</span></a>
+                                        <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                                        <ul class="sub-menu">
+                                            <li><a href="index.html"><span class="menu-text">Home One</span></a></li>
+                                            <li><a href="index-2.html"><span class="menu-text">Home Two</span></a></li>
+                                            <li><a href="index-3.html"><span class="menu-text">Home Three</span></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="about.html"><span class="menu-text">About Us</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="service.html"><span class="menu-text">Services</span></a>
+                                    </li>
+                                    <li class="has-children">
+                                        <a href="work.html"><span class="menu-text">Work</span></a>
+                                        <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                                        <ul class="sub-menu">
+                                            <li><a href="work.html"><span class="menu-text">Work</span></a></li>
+                                            <li><a href="work-details.html"><span class="menu-text">Work Details</span></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-children">
+                                        <a href="#"><span class="menu-text">Blog</span></a>
+                                        <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                                        <ul class="sub-menu">
+                                            <li><a href="blog-grid.html"><span class="menu-text">Blog Grid</span></a>
+                                            </li>
+                                            <li><a href="blog-classic.html"><span class="menu-text">Blog Classic</span></a>
+                                            </li>
+                                            <li><a href="blog-details.html"><span class="menu-text">Blog Details</span></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="contact-us.html"><span class="menu-text">Contact Us</span></a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- Header Search Start -->
+                        <div class="header-search-area ml-xl-7 ml-0">
+
+                            <!-- Header Login Start -->
+                            <div class="header-search">
+                                <a href="javascript:void(0)" class="header-search-toggle"><i
+                                        class="pe-7s-search pe-2x pe-va"></i></a>
+                            </div>
+                            <!-- Header Login End -->
+                        </div>
+                        <!-- Header Search End -->
+
+                        <!-- Header Mobile Menu Toggle Start -->
+                        <div class="header-mobile-menu-toggle d-xl-none ml-sm-2">
+                            <button class="toggle">
+                                <i class="icon-top"></i>
+                                <i class="icon-middle"></i>
+                                <i class="icon-bottom"></i>
+                            </button>
+                        </div>
+                        <!-- Header Mobile Menu Toggle End -->
+                    </div>
+                    <!-- Header Main Menu End -->
+
+                    <!-- Header Right Start -->
+                    <div class="col-xl-2 col d-none d-sm-flex justify-content-end order-1 order-xl-2">
+                        <a href="#" class="btn btn-light btn-hover-primary">Buy Now</a>
+                    </div>
+                    <!-- Header Right End -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header Section End -->
+
+    <!-- Main Search Start -->
+    <div class="main-search-active">
+        <div class="sidebar-search-icon">
+            <button class="search-close"><i class="pe-7s-close"></i></button>
+        </div>
+        <div class="sidebar-search-input">
+            <form action="#">
+                <div class="form-search">
+                    <input id="search" class="input-text" value="" placeholder="" type="search">
+                    <button>
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </form>
+            <p class="form-description">Hit enter to search or ESC to close</p>
+        </div>
+    </div>
+    <!-- Main Search End -->
+
+    <!-- Page Title Section Start -->
+    <div class="page-title-section section section-padding-top" data-overlay="0.7"
+         data-bg-image="{% static 'assets/images/bg/breadcrumb-bg-two.jpg' %}">
+        <div class="page-title">
+            <div class="container">
+                <h1 class="title">We work with bold brands that we believe in</h1>
+            </div>
+        </div>
+        <div class="page-breadcrumb position-static">
+            <div class="container">
+                <ul class="breadcrumb justify-content-center">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="current">Work</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Page Title Section End -->
+
+
+{% block content %}
+
+{% endblock %}
+
+
+    <div class="footer-section section" data-bg-color="#030e22">
+        <div class="container">
+
+            <!-- Footer Top Widgets Start -->
+            <div class="row mb-lg-14 mb-md-10 mb-6">
+
+                <!-- Footer Widget Start -->
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 col-12 mb-6">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="index.html"><img src="{% static 'assets/images/logo/footer-logo.png' %}"
+                                                      alt="Agency Logo"></a>
+                        </div>
+                        <div class="footer-widget-content">
+                            <div class="content">
+
+
+                                <p><a href="#">(+1) 212-946-2701</a></p>
+                                <p><a href="#">hello@hasagency.com</a></p>
+                            </div>
+                            <div class="footer-social-inline">
+                                <a href="#"><i class="fab fa-twitter-square"></i></a>
+                                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Widget End -->
+
+                <!-- Footer Widget Start -->
+                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6 mb-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-widget-title">Services</h4>
+                        <div class="footer-widget-content">
+                            <ul>
+                                <li><a href="#">Marketing</a></li>
+                                <li><a href="#">SEO/SEM</a></li>
+                                <li><a href="#">Development</a></li>
+                                <li><a href="#">UX Design</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Widget End -->
+
+                <!-- Footer Widget Start -->
+                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-widget-title">Products</h4>
+                        <div class="footer-widget-content">
+                            <ul>
+                                <li><a href="#">Elementor Guru</a></li>
+                                <li><a href="#">WooLentor Pro</a></li>
+                                <li><a href="#">Plugins <span class="ft-badge">New</span></a></li>
+                                <li><a href="#">Page Builder</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Widget End -->
+
+                <!-- Footer Widget Start -->
+                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-widget-title">About</h4>
+                        <div class="footer-widget-content">
+                            <ul>
+                                <li><a href="#">Features</a></li>
+                                <li><a href="#">Our Partners</a></li>
+                                <li><a href="#">Affiliate Program</a></li>
+                                <li><a href="#">Pricing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Widget End -->
+
+                <!-- Footer Widget Start -->
+                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-widget-title">Contact</h4>
+                        <div class="footer-widget-content">
+                            <ul>
+                                <li><a href="#">Support Ticket</a></li>
+                                <li><a href="#">Help Desk</a></li>
+                                <li><a href="#">Live Chat</a></li>
+                                <li><a href="#">FAQs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Widget End -->
+
+            </div>
+            <!-- Footer Top Widgets End -->
+
+            <!-- Footer Copyright Start -->
+            <div class="row">
+                <div class="col">
+                    <p class="copyright">Copyright &copy; 2020 <a href="https://hasthemes.com/">HasThemes</a>. All
+                        Rights Reserved.</p>
+                </div>
+            </div>
+            <!-- Footer Copyright End -->
+
+        </div>
+    </div>
+
+    <!-- Scroll Top Start -->
+    <a href="#" class="scroll-top" id="scroll-top">
+        <i class="arrow-top fal fa-long-arrow-up"></i>
+        <i class="arrow-bottom fal fa-long-arrow-up"></i>
+    </a>
+    <!-- Scroll Top End -->
+</div>
+
+<div id="site-main-mobile-menu" class="site-main-mobile-menu">
+    <div class="site-main-mobile-menu-inner">
+        <div class="mobile-menu-header">
+            <div class="mobile-menu-logo">
+                <a href="index.html"><img src="{% static 'assets/images/logo/logo.png' %}" alt=""></a>
+            </div>
+            <div class="mobile-menu-close">
+                <button class="toggle">
+                    <i class="icon-top"></i>
+                    <i class="icon-bottom"></i>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu-content">
+            <nav class="site-mobile-menu">
+                <ul>
+                    <li class="has-children">
+                        <a href="index.html"><span class="menu-text">Homepage</span></a>
+                        <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                        <ul class="sub-menu">
+                            <li><a href="index.html"><span class="menu-text">Home One</span></a></li>
+                            <li><a href="index-2.html"><span class="menu-text">Home Two</span></a></li>
+                            <li><a href="index-3.html"><span class="menu-text">Home Three</span></a></li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="about.html"><span class="menu-text">About Us</span></a>
+                    </li>
+                    <li>
+                        <a href="service.html"><span class="menu-text">Services</span></a>
+                    </li>
+                    <li class="has-children">
+                        <a href="work.html"><span class="menu-text">Work</span></a>
+                        <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                        <ul class="sub-menu">
+                            <li><a href="work.html"><span class="menu-text">Work</span></a></li>
+                            <li><a href="work-details.html"><span class="menu-text">Work Details</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children">
+                        <a href="#"><span class="menu-text">Blog</span></a>
+                        <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                        <ul class="sub-menu">
+                            <li><a href="blog-grid.html"><span class="menu-text">Blog Grid</span></a></li>
+                            <li><a href="blog-classic.html"><span class="menu-text">Blog Classic</span></a></li>
+                            <li><a href="blog-details.html"><span class="menu-text">Blog Details</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="contact-us.html"><span class="menu-text">Contact Us</span></a>
+                    </li>
                 </ul>
-                <form>
-                    <input class="form-control" type="text" placeholder="Поиск" aria-label="Search">
-                </form>
-            </div>
-        </div>
-    </nav>
-</header>
-
-<main>
-    <div class="constructor pb-4">
-        <div class="row">
-            <div class="carousel-item active">
-                <img class="d-block w-100"
-                     src="https://cdn.jevelin.shufflehound.com/blog1/wp-content/uploads/sites/11/2016/11/Title_2.jpg"
-                     style="min-height: 200px;"
-                     alt="">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 class="card-title">Название карточки</h5>
-                    <h1 class="text-center">Hello, world!</h1>
-                </div>
-            </div>
-
-
+            </nav>
         </div>
     </div>
-</main>
-<div class="sh-filter-blog sh-filter-container sh-portfolio-filter-style3 sh-portfolio-filter-style4">
-<div class="sh-filter">
-<span class="sh-filter-item active">
-<a href="https://jevelin.shufflehound.com/blog1/" class="sh-filter-item-content"><font style="vertical-align: inherit;">Все </font></a>
-</span>
-<span class="sh-filter-item">
-<a href="https://jevelin.shufflehound.com/blog1/?category=commercial" class="sh-filter-item-content"><font style="vertical-align: inherit;">
- Коммерческий </font></a>
-</span>
-<span class="sh-filter-item">
-<a href="https://jevelin.shufflehound.com/blog1/?category=design" class="sh-filter-item-content"><font style="vertical-align: inherit;">
- Дизайн </font></a>
-</span>
-<span class="sh-filter-item">
-<a href="https://jevelin.shufflehound.com/blog1/?category=nature" class="sh-filter-item-content"><font style="vertical-align: inherit;">
- Природа </font></a>
-</span>
-<span class="sh-filter-item">
-<a href="https://jevelin.shufflehound.com/blog1/?category=people" class="sh-filter-item-content"><font style="vertical-align: inherit;">
- Люди </font></a>
-</span>
-<span class="sh-filter-item">
-<a href="https://jevelin.shufflehound.com/blog1/?category=photography" class="sh-filter-item-content"><font style="vertical-align: inherit;">
- Фотография </font></a>
-</span>
-<span class="sh-filter-item">
-<a href="https://jevelin.shufflehound.com/blog1/?category=tech" class="sh-filter-item-content"><font style="vertical-align: inherit;">
- Технология </font></a>
-</span>
-<span class="sh-filter-item">
-<a href="https://jevelin.shufflehound.com/blog1/?category=travel" class="sh-filter-item-content"><font style="vertical-align: inherit;">
- Путешествовать </font></a>
-</span>
-<span class="sh-filter-item">
-<a href="https://jevelin.shufflehound.com/blog1/?category=uncategorized" class="sh-filter-item-content"><font style="vertical-align: inherit;">
- Без категории </font></a>
-</span>
 </div>
-</div>
-<main>
-    <div class="container">
-        <div class="row">
-            <div class="col-3 pb-4">
-                <div class="card">
-                    <img src="https://cdn.icon-icons.com/icons2/215/PNG/256/edit-not-validated256_25238.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Заголовок карточки</h5>
-                        <p class="card-text">Небольшой пример текста, который должен основываться на названии карточки и
-                            составлять основную часть содержимого карты.</p>
-                        <a href="#" class="btn btn-primary">Перейти куда-нибудь</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3 pb-4">
-                <div class="card">
-                    <img src="https://cdn.icon-icons.com/icons2/215/PNG/256/edit-not-validated256_25238.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Заголовок карточки</h5>
-                        <p class="card-text">Небольшой пример текста, который должен основываться на названии карточки и
-                            составлять основную часть содержимого карты.</p>
-                        <a href="#" class="btn btn-primary">Перейти куда-нибудь</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3 pb-4">
-                <div class="card">
-                    <img src="https://cdn.icon-icons.com/icons2/215/PNG/256/edit-not-validated256_25238.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Заголовок карточки</h5>
-                        <p class="card-text">Небольшой пример текста, который должен основываться на названии карточки и
-                            составлять основную часть содержимого карты.</p>
-                        <a href="#" class="btn btn-primary">Перейти куда-нибудь</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3 pb-4">
-                <div class="card">
-                    <img src="https://cdn.icon-icons.com/icons2/215/PNG/256/edit-not-validated256_25238.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Заголовок карточки</h5>
-                        <p class="card-text">Небольшой пример текста, который должен основываться на названии карточки и
-                            составлять основную часть содержимого карты.</p>
-                        <a href="#" class="btn btn-primary">Перейти куда-нибудь</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
 
 
-<br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
+<script src="{% static 'assets/js/vendor/vendor.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins/plugins.min.js' %}"></script>
+<script src="{% static 'assets/js/main.js' %}"></script>
+
+
 </body>
+
 </html>

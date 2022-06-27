@@ -35,7 +35,7 @@ class Post(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='category', verbose_name='Категирии')
     tag = models.ManyToManyField(Tag, related_name='tag', verbose_name='Тег')
     draft = models.BooleanField('Черновик', default=False)
-
+    image = models.ImageField(verbose_name='Изоброжение', upload_to='post/%Y/%m/%d', blank=True)
     def get_absolute_url(self):
         return reverse("post", kwargs={"slug": self.url})
 
