@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static %}{% block title %}
+{{ title }} :: {{ block.super }}
+{% endblock %}
 {% block content %}
     <!-- Work Section Start -->
     <div class="section section-padding-t90-b100">
@@ -19,19 +21,19 @@
                     <div class="col mb-6">
                         <div class="work border-1 border-danger">
                             <div class="thumbnail text-center">
-                                <a class="image" href="work-details.html">
+                                <a class="image" href="{{ post.get_absolute_url }}">
                                     {% if post.image %}
                                         <img src="{{ post.image.url }}" style="max-width: 200px; max-height: 200px;"
-                                             alt="work"></a>
+                                             alt="{{ post.title }}"></a>
                                     {% else %}
                                         <img src="https://img2.freepng.ru/20181125/wbe/kisspng-apartment-renting-london-residential-house-product-5bfa6d06347989.212131131543138566215.jpg"
-                                             alt="work"></a>
+                                             alt="{{ post.title }}"></a>
                                     {% endif %}
                             </div>
                             <div class="info">
                                 <h3 class="title"><a href="work-details.html">{{ post.title }}</a></h3>
                                 <p class="desc">{{ post.text|safe|truncatewords_html:20 }}</p>
-                                <a href="work-details.html">View Project</a>
+                                <a href="{{ post.get_absolute_url }}">Конкретнее</a>
                             </div>
                         </div>
                     </div>
