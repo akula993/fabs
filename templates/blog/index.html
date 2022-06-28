@@ -1,23 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}{% block title %}
-{{ title }} :: {{ block.super }}
+    {{ title }} :: {{ block.super }}
 {% endblock %}
 {% block content %}
     <!-- Work Section Start -->
     <div class="section section-padding-t90-b100">
         <div class="container">
-
-            <!-- Section Title Start -->
-            <div class="section-title text-center" data-aos="fade-up">
-                <h2 class="title fz-32">Crafting effective digital marketing, web development, <br> video content and
-                    communication design</h2>
-            </div>
-            <!-- Section Title End -->
-
-            <!-- About Wrapper Start -->
             <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 mb-n6">
                 {% for post in posts %}
-                    <!-- Single Work Start -->
                     <div class="col mb-6">
                         <div class="work border-1 border-danger">
                             <div class="thumbnail text-center">
@@ -37,14 +27,8 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Single Work End -->
                 {% endfor %}
-
-
             </div>
-            <!-- About Wrapper End -->
-
         </div>
     </div>
-    <!-- Work Section End -->
 {% endblock %}

@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 from django.views.generic import ListView, DetailView
 
-from blog.models import Post, Category
+from blog.models import Post, Category, Tag
 
 
 class HomeViews(ListView):
@@ -24,6 +24,8 @@ class CategoryViews(ListView):
     context_object_name = 'posts'
     allow_empty = False
 
+    slug_field = 'url'
+
     def get_queryset(self):
         return Post.objects.filter(category__url=self.kwargs['slug'])
 
@@ -32,13 +34,29 @@ class CategoryViews(ListView):
         context['title'] = Category.objects.get(url=self.kwargs['slug'])
         return context
 
-def get_post(request, slug):
-    return render(request, 'blog/detail.html')
+
+class TagViews(ListView):
+    template_name = 'blog/index.html'
+    context_object_name = 'posts'
+    allow_empty = False
+
+    slug_field = 'url'
+
+    def get_queryset(self):
+        return Post.objects.filter(tag__url=self.kwargs['slug'])
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = Tag.objects.get(url=self.kwargs['slug'])
+        return context
+
+
 
 class PostView(DetailView):
     model = Post
     template_name = 'blog/detail.html'
     context_object_name = 'post'
+    slug_field = 'url'
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
