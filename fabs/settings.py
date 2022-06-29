@@ -22,9 +22,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-pjo9qybt!+rd@q+ns5+egj(hd3cdw0$fno6!cc&!@!(f35*^n4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
+
+SITE_ID = 1
 
 # Application definition
 
@@ -36,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'django.contrib.sites',
+    'django.contrib.flatpages',
     'ckeditor',
     'ckeditor_uploader',
 
@@ -50,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 ]
 
 ROOT_URLCONF = 'fabs.urls'
@@ -118,8 +123,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATIC_DIR = BASE_DIR / 'static'
-STATICFILES_DIRS = [STATIC_DIR]
-# STATIC_ROOT = BASE_DIR / 'static'
+# STATICFILES_DIRS = [STATIC_DIR]
+STATIC_ROOT = "/var/www/fabs.ga/static/"
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 # Default primary key field type

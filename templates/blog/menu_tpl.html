@@ -1,16 +1,19 @@
+{% load flatpages %}
+{% get_flatpages as flatpages %}
 <nav class="{{ menu_class }}">
     <ul>
         <li class="has-children"><a href="{% url "home" %}">Главная</a></li>
-        <li><a href="about.html"><span class="menu-text">О проекте</span></a></li>
-        <li><a href="service.html"><span class="menu-text">Сервисы</span></a></li>
+        {% for page in flatpages %}
+            <li><a href="{{ page.url }}"><span class="menu-text">{{ page.title }}</span></a></li>
+        {% endfor %}
         <li class="has-children"><a href="#"><span class="menu-text">Категории</span></a>
             <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
             <ul class="sub-menu">
                 {% for category in categories %}
-                                <li><a href="{{ category.get_absolute_url }}"><span class="menu-text">{{ category.title }}</span></a></li>
+                    <li><a href="{{ category.get_absolute_url }}"><span
+                            class="menu-text">{{ category.title }}</span></a></li>
                 {% endfor %}
             </ul>
         </li>
-        <li><a href="contact-us.html"><span class="menu-text">Контакты</span></a></li>
     </ul>
 </nav>

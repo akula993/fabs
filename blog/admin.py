@@ -3,11 +3,20 @@ from django import forms
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 from blog.models import Category, Tag, Post
 
+from django.contrib.flatpages.admin import FlatPageAdmin
+from django.contrib.flatpages.models import FlatPage
+from django.utils.translation import gettext_lazy as _
+
+
+
+
 class PostAdminForm(forms.ModelForm):
     text = forms.CharField(widget=CKEditorUploadingWidget())
+
     class Meta:
         model = Post
         fields = '__all__'
+
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
@@ -31,6 +40,7 @@ class PostAdmin(admin.ModelAdmin):
     form = PostAdminForm
     """Для дублирование фильма"""
     list_editable = ('draft', 'category',)
+
     # fields = (('title', 'url'), 'text', ('tag', 'category'), 'draft',)
     # readonly_fields = ('get_image',)
     # fieldsets = (
@@ -45,8 +55,6 @@ class PostAdmin(admin.ModelAdmin):
     #     }),
     #
     # )
-
-
 
     def unpublish(self, request, queryset):
         """ Снять с публикации """
@@ -71,3 +79,25 @@ class PostAdmin(admin.ModelAdmin):
     unpublish.short_description = 'Снять с публикации'
     unpublish.allowed_permission = ('change',)
     # get_image.short_description = "Постер"
+
+class FlatPageAdmin(FlatPageAdmin):
+    fieldsets = (
+        (None, {'fields': ('url', 'title', 'content', 'sites')}),
+        (_('Advanced options'), {
+            'classes': ('collapse',),
+            'fields': (
+                'enable_comments',
+                'registration_required',
+                'template_name',
+            ),
+        }),
+    )
+
+
+
+
+
+
+
+admin.site.unregister(FlatPage)
+admin.site.register(FlatPage, FlatPageAdmin)

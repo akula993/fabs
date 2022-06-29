@@ -51,7 +51,6 @@ class TagViews(ListView):
         return context
 
 
-
 class PostView(DetailView):
     model = Post
     template_name = 'blog/detail.html'
@@ -64,3 +63,11 @@ class PostView(DetailView):
         self.object.save()
         self.object.refresh_from_db()
         return context
+
+
+def handle404(request, exception):
+    return render(request, '400.html', status=404)
+
+
+def handle500(request):
+    return render(request, '500.html', status=500)

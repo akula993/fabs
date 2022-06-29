@@ -1,4 +1,5 @@
-from django.urls import path
+from django.urls import path, re_path
+from django.contrib.flatpages import views
 
 from blog.views import HomeViews, PostView, CategoryViews, TagViews
 
@@ -12,4 +13,7 @@ urlpatterns = [
 
     # path('post/<int:post_id>/', DetailsView.as_view(), name='post'),
     path('post/<str:slug>/', PostView.as_view(), name='post'),
+]
+urlpatterns += [
+    re_path(r'^(?P<url>.*/)$', views.flatpage, name='flatpage'),
 ]

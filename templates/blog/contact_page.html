@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="section section-padding">
+        <div class="container">
+            <div class="row pt--100 pb--80">
+                <div class="col-lg-12 col-md-12 offset-lg-12 col-12">
+                    <div class="work-left work-details">
+                        <div class="work-main-info">
+                            <div class="work-content">
+                                <div class="work-left work-details" data-aos="fade-up">
+                                        <div class="portfolio-main-info">
+                                            <h2 class="title">{{ flatpage.title }}</h2>
+                                        </div>
+                                    </div>
+                                <div class="desc mt-8">
+                                    <div class="content mb-5" data-aos="fade-up">
+
+                                        {{ flatpage.content }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
