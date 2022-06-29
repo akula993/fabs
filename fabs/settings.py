@@ -124,7 +124,7 @@ STATIC_URL = 'static/'
 
 STATIC_DIR = BASE_DIR / 'static'
 # STATICFILES_DIRS = [STATIC_DIR]
-STATIC_ROOT = "/var/www/fabs.ga/static/"
+STATIC_ROOT = "/var/www/fabs/static/"
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 # Default primary key field type
